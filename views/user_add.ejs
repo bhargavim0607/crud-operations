@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' text="text/css" href='/stylesheets/style.css' />
+
+<style>
+  body{
+    text-align: center;
+}
+input{
+    border-radius: 5px;
+    border-style: groove;
+    border-color: bisque;
+}
+input:hover{
+    border-color: burlywood;
+}
+.container{
+    margin-left: 200px;
+    background-color: cadetblue;
+}
+.form-horizontal{
+    background-color: cadetblue;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+label{
+  font-weight: bolder;
+  color: thistle;
+}
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--====form section start====-->
+<div class="container">
+  <h2 style="text-align: center;"><%= title %></h2>
+    <h2>Create User Data</h2>
+    <form action="/save" method="POST" class="form-horizontal">
+      <div class="form-group">
+      <label class="control-label col-sm-2">ROLL NO</label>
+      <input type="text" placeholder="Enter RollNumber" name="rollno" required>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Full Name</label>
+        <input type="text" placeholder="Enter Full Name" name="Name" required><br>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Email Address</label>
+        <input type="email" placeholder="Enter Email Address" name="email" required>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Branch</label>
+        <input type="text" placeholder="Enter Branch" name="branch" required>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Phone Number</label>
+          <input type="tel" placeholder="Enter phonenumber" name="phone" required>
+      </div><br>
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+<!--====form section start====-->
+</body>
+</html>

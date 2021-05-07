@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/style.css' />
+    <style>
+      body{
+        text-align: center;
+    }
+    input{
+        border-radius: 5px;
+        border-style: groove;
+        border-color: bisque;
+        text-align: center;
+    }
+    input:hover{
+        border-color: burlywood;
+    }
+    .container{
+        margin-left: 200px;
+        background-color: turquoise;
+    }
+    
+    h2{
+        text-align: center;
+    }
+    label{
+      font-weight: bolder;
+      color: palevioletred;
+      text-align: center;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center;"><%= title %></h1>
+      <h2 style="text-align: center;">Edit User Data</h2>
+    <form action="/update" method="POST" class="form-horizontal">
+      <label class="control-label col-sm-2">ROLL NO</label>
+      <input type="text" placeholder="Enter RollNumber" value="<%= user.rollno %>" name="rollno" required>
+        <br>  <label class="control-label col-sm-2">Full Name</label>
+          <input type="text" placeholder="Enter Full Name" value="<%= user.Name %>" name="Name" required>
+         <br> <label class="control-label col-sm-2">Email Address</label>
+          <input type="email" placeholder="Enter Email Address" value="<%= user.Email %>" name="email" required>
+         <br> <label class="control-label col-sm-2">Branch</label>
+          <input type="text" placeholder="Enter Branch" value="<%= user.Branch %>" name="branch" required>
+         <br> <label class="control-label col-sm-2">Phone Number</label>
+          <input type="tel" placeholder="Enter phonenumber" value="<%= user.PhoneNumber %>" name="phone" required>
+         <br> <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+    
+  </body>
+</html>

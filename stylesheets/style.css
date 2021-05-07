@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+input{
+    border-radius: 5px;
+    border-style: groove;
+    border-color: bisque;
+}
+input:hover{
+    border-color: burlywood;
+}
+.container{
+    margin-left: 200px;
+    background-color: cadetblue;
+}
+.form-horizontal{
+    background-color: cadetblue;
+}
+h2{
+    text-align: center;
+}
